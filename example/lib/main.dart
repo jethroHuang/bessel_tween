@@ -46,22 +46,32 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         duration: Duration(milliseconds: 3000), vsync: this);
     // 初始化贝塞尔曲线动画,传入三个控制点
     besselAnimation = BesselTween(pointList).animate(controller);
-
     controller.addListener(() {
       setState(() {});
     });
-    controller.forward();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(20),
-      child: CustomPaint(
-        size: Size(w, h),
-        painter: Ball(besselAnimation.value, pointList),
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        CustomPaint(
+          size: Size(w, h),
+          painter: Ball(besselAnimation.value, pointList),
+        ),
+        Container(
+          padding: EdgeInsets.only(top: 8),
+          child: RaisedButton(
+            onPressed: () {
+              controller.reset();
+              controller.forward();
+            },
+            child: Text('开始动画'),
+          ),
+        )
+      ],
     );
   }
 }
@@ -78,11 +88,10 @@ class Ball extends CustomPainter {
     // 绘制背景
     Paint paint = Paint()
       ..style = PaintingStyle.fill
-      ..strokeWidth=1
-      ..color =Colors.blue.withOpacity(0.2);
+      ..strokeWidth = 1
+      ..color = Colors.blue.withOpacity(0.2);
 
-    canvas.drawRect(
-        Rect.fromLTRB(0, 0, size.width, size.height), paint);
+    canvas.drawRect(Rect.fromLTRB(0, 0, size.width, size.height), paint);
 
     paint.color = Colors.blue;
 
