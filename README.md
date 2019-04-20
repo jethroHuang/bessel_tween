@@ -42,3 +42,7 @@
     ![Kapture 2019-04-20 at 10.46.07.gif](https://upload-images.jianshu.io/upload_images/2155672-d11c7039fc6390d8.gif?imageMogr2/auto-orient/strip)
     
     实现效果的代码在example里，debug模式会有点卡顿，在release模式里就会极其丝滑
+    
+最后感谢 https://blog.csdn.net/aimeimeits/article/details/72809382 这篇文章的作者。
+
+本package的算法部分来自于上面那篇文章
