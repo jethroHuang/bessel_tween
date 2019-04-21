@@ -1,6 +1,6 @@
 name: bessel_tween
-description: 根据时间t(0.0~1.0)计算点(Offset)在贝塞尔曲线上的位置
-version: 0.0.2
+description: Calculate the position of the point (Offset) on the Bessel curve according to time t (0.0-1.0)
+version: 0.1.0
 author: jethroHuang <jethro_nb@qq.com>
 homepage: https://github.com/jethroHuang/bessel_tween
 
