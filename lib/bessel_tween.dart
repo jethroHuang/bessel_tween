@@ -9,14 +9,14 @@ import 'package:flutter/animation.dart';
 /// > _yhTriangle(3)
 /// > [1,2,1]
 List<int> _yhTriangle(int n) {
-    // 初始化一行
-    List<int> row = List();
-    int number = 1;
-    // 计算第N行的每一个数字
-    for (int j = 0; j <= n-1; j++) {
-      row.add(number);
-      number = number * (n-1 - j) ~/ (j + 1);
-    }
+  // 初始化一行
+  List<int> row = List();
+  int number = 1;
+  // 计算第N行的每一个数字
+  for (int j = 0; j <= n - 1; j++) {
+    row.add(number);
+    number = number * (n - 1 - j) ~/ (j + 1);
+  }
   return row;
 }
 
@@ -28,7 +28,7 @@ class BesselTween extends Tween<Offset> {
 
   /// [points] 贝塞尔曲线的控制点列表
   BesselTween(this.points) {
-    assert(points.length>1);
+    assert(points.length > 1);
     N = points.length;
   }
 
