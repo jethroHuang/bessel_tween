@@ -1,6 +1,6 @@
 name: bessel_tween
 description: Calculate the position of the point (Offset) on the Bessel curve according to time t (0.0-1.0)
-version: 0.1.0
+version: 0.1.1
 author: jethroHuang <jethro_nb@qq.com>
 homepage: https://github.com/jethroHuang/bessel_tween
 
